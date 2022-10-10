@@ -23,7 +23,7 @@ namespace RestManagement.Controllers
             _productService = productService;
         }
 
-        [HttpPost]
+        [HttpPost("AddProduct")]
         [Authorize(Roles = $"{RoleNames.Client},{RoleNames.Manager}")]
         public async Task AddProductAsync(ProductViewModel model)
         {
